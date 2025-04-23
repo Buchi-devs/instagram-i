@@ -17,6 +17,11 @@
         .insta-border {
             border: 1px solid #dbdbdb;
         }
+        @media (max-width:768px){
+            .insta-border {
+            border: none;
+        }  
+        }
         body::-webkit-scrollbar{
             display: none;
         }
@@ -25,7 +30,7 @@
 </head>
 <body class="bg-gray-50">
    
-    <div class="container flex flex-col justify-center items-center min-h-screen max-w-screen-md mx-auto py-8">
+    <div class="container flex flex-col justify-center items-center min-h-screen max-w-screen-md mx-2 py-8">
         <div class="w-full max-w-sm">
             <!-- Main login box -->
             <div class="bg-white insta-border rounded p-8 mb-3">
@@ -211,10 +216,10 @@
                 const loginButton = document.getElementById('loginButton');
                 
                 if (username.length > 0 && password.length > 0) {
-                    loginButton.classList.remove('opacity-50');
+                    loginButton.classList.remove('opacity-70');
                     loginButton.disabled = false;
                 } else {
-                    loginButton.classList.add('opacity-50');
+                    loginButton.classList.add('opacity-70');
                     loginButton.disabled = true;
                 }
             }
